@@ -1,12 +1,13 @@
 import React from 'react';
+import { CircularTimerProps } from '../types';
 
-const CircularTimer = ({ isRunning, timeLeft, totalTime = 60 }) => {
+const CircularTimer: React.FC<CircularTimerProps> = ({ isRunning, timeLeft, totalTime = 60 }) => {
   // Calculate the circumference of the circle
   const radius = 28;
   const circumference = 2 * Math.PI * radius;
   
   // Calculate the stroke-dashoffset based on remaining time
-  const progress = timeLeft / totalTime;
+  const progress = (timeLeft ?? totalTime) / totalTime;
   const dashoffset = circumference * (1 - progress);
 
   return (
