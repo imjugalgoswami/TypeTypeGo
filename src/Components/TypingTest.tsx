@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CircularTimer from './CountDownTimer';
 
 interface DialogProps {
   open: boolean;
@@ -138,7 +139,7 @@ const TypingTest: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-gray-300 p-8 font-mono">
-      <div className="flex justify-center gap-4 mb-8">
+      <div className="flex justify-center gap-4 mb-12">
         <div className="flex items-center gap-2 px-3 py-2 rounded bg-[#1a2942] cursor-pointer">
           <span className="text-orange-700">⏱</span>
           <span className="text-gray-400">time</span>
@@ -165,15 +166,13 @@ const TypingTest: React.FC = () => {
         </div>
       </div>
 
-      <div className="h-8 text-center mb-4">
-        {isRunning && timeLeft !== null && (
-          <div className="text-2xl text-orange-700">
-            {timeLeft}
-          </div>
-        )}
-      </div>
+      <CircularTimer 
+        isRunning={isRunning}
+        timeLeft={timeLeft}
+        totalTime={time}
+      />
 
-      <div className="max-w-7xl mx-auto text-center mb-8">
+      <div className="max-w-7xl mx-auto text-center mt-2 mb-8">
         <div className="text-4xl leading-normal tracking-wide text-gray-600 whitespace-pre-line">
           {lines.map((line, lineIndex) => (
             <div key={lineIndex} className="leading-normal">
