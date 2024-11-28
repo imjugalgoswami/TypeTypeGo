@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <!-- Define animation for blinking cursor -->
+    <animate 
+      xlink:href="#cursor"
+      attributeName="opacity"
+      values="1;0;1"
+      dur="1s"
+      repeatCount="indefinite"/>
+    
+    <!-- Animation for dots -->
+    <animate
+      xlink:href="#dot1"
+      attributeName="opacity"
+      values="1;0.3;1"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+    <animate
+      xlink:href="#dot2"
+      attributeName="opacity"
+      values="1;0.3;1"
+      dur="1.5s"
+      begin="0.2s"
+      repeatCount="indefinite"/>
+    <animate
+      xlink:href="#dot3"
+      attributeName="opacity"
+      values="1;0.3;1"
+      dur="1.5s"
+      begin="0.4s"
+      repeatCount="indefinite"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="100" fill="#1e293b" rx="10"/>
+  
+  <!-- Main Text -->
+  <text x="30" y="60" font-family="monospace" font-size="40" font-weight="bold" fill="white">Type</text>
+  <text x="130" y="60" font-family="monospace" font-size="40" font-weight="bold" fill="white">Type</text>
+  <text x="230" y="60" font-family="monospace" font-size="40" font-weight="bold" fill="#f97316">Go</text>
+  
+  <!-- Animated Dots -->
+  <circle id="dot1" cx="300" cy="55" r="4" fill="#f97316"/>
+  <circle id="dot2" cx="315" cy="55" r="4" fill="#f97316"/>
+  <circle id="dot3" cx="330" cy="55" r="4" fill="#f97316"/>
+  
+  <!-- Blinking Cursor -->
+  <rect id="cursor" x="345" y="30" width="3" height="40" fill="#f97316"/>
+</svg>

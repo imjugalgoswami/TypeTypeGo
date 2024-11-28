@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark background circle -->
+  <circle cx="50" cy="50" r="45" fill="#1e293b"/>
+  
+  <!-- Main white 'T' -->
+  <path d="M35 30 L65 30 L65 37 L55 37 L55 70 L45 70 L45 37 L35 37 Z" fill="white"/>
+  
+  <!-- Orange dots -->
+  <circle cx="30" cy="50" r="3" fill="#f97316"/>
+  <circle cx="37" cy="50" r="3" fill="#f97316"/>
+  <circle cx="44" cy="50" r="3" fill="#f97316"/>
+  
+  <!-- Orange vertical line -->
+  <rect x="65" y="40" width="2.5" height="20" fill="#f97316"/>
+</svg>
