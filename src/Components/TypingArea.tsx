@@ -1,4 +1,4 @@
-import { TypingAreaProps } from "../types";
+import { TypingAreaProps } from "../types/types";
 
 export const TypingArea: React.FC<TypingAreaProps> = ({ lines, userInput, showCursor }) => {
     return (

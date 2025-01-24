@@ -1,5 +1,5 @@
 import React from 'react';
-import { DialogProps } from '../types';
+import { DialogProps } from '../types/types';
 
 export const Dialog: React.FC<DialogProps> = ({ open, onClose, children }) => {
   if (!open) return null;

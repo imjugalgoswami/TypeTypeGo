@@ -1,31 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import landingImage from '../assets/lendingPageImage.jpg'; 
 
+
 const TypeTypeGoLanding = () => {
   const [showCursor, setShowCursor] = useState(true);
-
   const navigate = useNavigate();
 
-  // Blinking cursor animation
   useEffect(() => {
     const interval = setInterval(() => {
       setShowCursor(prev => !prev);
-    }, 530); // Blink speed
+    }, 530);
 
     return () => clearInterval(interval);
   }, []);
 
-
   const handleGetStarted = () => {
-    navigate('/test'); // Navigate to the typing test page
+    navigate('/test');
   };
+
+
 
   return (
     <div className="flex min-h-screen bg-dark-primary">
       {/* Left side - Image placeholder */}
       <div className="w-1/2 flex items-center justify-center">
-        {/* Image will be added by user */}
         <div className="flex items-center justify-center text-gray-500">
           <img width={400} src={landingImage} alt="" />
         </div>
@@ -47,12 +46,15 @@ const TypeTypeGoLanding = () => {
           <button
             onClick={handleGetStarted}
             className="w-full bg-white hover:bg-gray-100 text-gray-900 text-lg font-bold py-3 px-6 rounded-lg transition duration-200"
-            >
+          >
             Get started
           </button>
           
-          <button className="w-full bg-white hover:bg-gray-100 text-gray-900 text-lg font-bold py-3 px-6 rounded-lg transition duration-200">
-            Access account
+          <button 
+            onClick={() => navigate('/login')}
+            className="w-full bg-white hover:bg-gray-100 text-gray-900 text-lg font-bold py-3 px-6 rounded-lg transition duration-200"
+          >
+            Login / Register
           </button>
         </div>
       </div>

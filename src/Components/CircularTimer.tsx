@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircularTimerProps } from '../types';
+import { CircularTimerProps } from '../types/types';
 
 const CircularTimer: React.FC<CircularTimerProps> = ({ isRunning, timeLeft, totalTime = 60 }) => {
   // Calculate the circumference of the circle

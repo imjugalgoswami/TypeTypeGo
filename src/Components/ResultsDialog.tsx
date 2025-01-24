@@ -1,4 +1,4 @@
-import { ResultCardProps, ResultsDialogProps } from "../types";
+import { ResultCardProps, ResultsDialogProps } from "../types/types";
 import { Dialog } from "./Dialog";
 
 export const ResultsDialog: React.FC<ResultsDialogProps> = ({ 

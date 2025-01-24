@@ -1,4 +1,4 @@
-import { TimeSelectorProps } from "../types";
+import { TimeSelectorProps } from "../types/types";
 
 export const TimeSelector: React.FC<TimeSelectorProps> = ({ selectedTime, onTimeSelect }) => {
     const timeOptions = [15, 30, 60];
